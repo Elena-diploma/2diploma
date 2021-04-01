@@ -8,6 +8,15 @@ body {
     font-family: "open-sans", sans-serif;
 }
 
+footer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 65px;
+}
+
 /*header */
 .wrapper {
     width: 1200px;
@@ -20,12 +29,12 @@ body {
     background-repeat: no-repeat;
     background-color: #666666;
     background-position: center center;
-    background-size: 100%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    padding: 25px 0 130px 0;
+    padding-top: 25px;
     z-index: 0;
+    background-size: cover;
 }
 
 .header::before {
@@ -146,6 +155,7 @@ body {
 /* тренд */
 .trends-container {
     margin-top: 60px;
+
 }
 
 .trends-title {
@@ -154,6 +164,8 @@ body {
 
 .trends {
     display: flex;
+    width: 100vw;
+    height: 320px;
 }
 
 .trend {
@@ -576,25 +588,41 @@ h2::after {
     max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 15px;
 }
 
-.products-figure {
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 30px;
+.product {
+    display: flex;
+    margin-top: 30px;
+    padding: 0 15px;
+}
+
+.products-figure img {
+    width: 100%;
 }
 
 .product-block {
-    background-color: rgba(0, 0, 0, 0);
-    outline: 3px solid #b59f5b;
-    padding: 55px 30px 70px;
-    margin-top: -30px;
-    width: 300px;
-    background-position: center;
-    height: 35%;
+    margin-top: -35px;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 30px 18px 20px;
+    border: 2px solid #b59f5b;
+    font-family: opensans-regular, Arial, sans-serif;
+    flex-grow: 1;
+}
+
+.product-content {
+    margin: 0 10px;
+}
+.product-article {
+    text-decoration: none;
+    color: #0f0d0e;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    font-family: OpenSans, sans-serif;
+    padding: 10px 0;
 }
 
 .product-footer {
@@ -609,22 +637,13 @@ h2::after {
     top: calc(50% / 2);
 }
 
-.product {
-    display: flex;
-    margin-top: 30px;
-}
-
 .heading {
     font-size: 20px;
     color: #0f0d0e;
     text-transform: uppercase;
 }
 
-.products-course {
-    width: 30%;
-}
-
-.product__price {
+.product-price {
     display: flex;
     color: #0f0d0e;
     font-weight: 700;
@@ -669,15 +688,6 @@ h2::after {
 }
 
 /*  footer */
-footer {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-top: 65px;
-
-}
 
 .socials {
     display: flex;
@@ -845,7 +855,6 @@ footer {
     margin-top: 33px;
 }
 
-
 .popup-select {
     width: 330px;
     height: 48px;
@@ -963,7 +972,9 @@ footer {
     .burger-button {
         display: none;
     }
-
+    .header {
+        padding-bottom: 130px;
+    }
 }
 
 @media (min-width: 641px) and (max-width: 1199px) {
@@ -1013,6 +1024,7 @@ footer {
 
     .trends {
         width: 100%;
+        height: 100%;
         flex-wrap: wrap;
         justify-content: space-between;
     }
@@ -1029,13 +1041,16 @@ footer {
 
     .container {
         width: 100%;
+        margin: 0 15px;
     }
 
     .content {
         flex-wrap: wrap;
         width: auto;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 25px;
+        border-bottom: 2px solid #eeeeee;
     }
 
     .content-figure {
@@ -1050,16 +1065,20 @@ footer {
         width: 57%;
     }
 
+    .content-block-subject {
+        margin: 7px 0;
+    }
+    .other {
+        margin-top: 20px;
+    }
     .aside {
         width: 40%;
     }
 
-    .products {
-        width: 100%;
-    }
-
     .product {
-        display: flex;
+        margin: 0 15px;
+    }
+    .product {
         flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;
@@ -1067,7 +1086,10 @@ footer {
 
     .products-course {
         width: 45%;
-        text-align: center;
+    }
+
+    .popup-block {
+        width: 30%;
     }
 
     footer {
@@ -1082,6 +1104,7 @@ footer {
 
     .header {
         background-image: url("../img/banner-mobile.jpg");
+        padding-bottom: 215px;
     }
 
     .header-container {
@@ -1120,13 +1143,16 @@ footer {
     }
 
     .trends {
-        flex-direction: column
+        flex-direction: column;
+        height: 100%;
     }
 
     .trend {
         width: 100%;
         flex-wrap: wrap;
-        height: 220px;
+        margin-bottom: 3px;
+        height: 230px;
+
     }
 
     .trend:nth-child(2n + 2), .trend:nth-child(5n + 3) {
@@ -1136,6 +1162,7 @@ footer {
     .container {
         flex-direction: column;
         width: 100%;
+        padding-top: 45px;
     }
 
     .main {
@@ -1181,6 +1208,14 @@ footer {
     .product {
         flex-direction: column;
         width: 100%;
+    }
+
+    .products-figure img {
+        width: 100%;
+    }
+
+    .products-course{
+        margin-top: 20px;
     }
 
     footer {
