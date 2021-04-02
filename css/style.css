@@ -608,7 +608,7 @@ h2::after {
     padding: 30px 18px 20px;
     border: 2px solid #b59f5b;
     font-family: opensans-regular, Arial, sans-serif;
-    flex-grow: 1;
+    position: relative;
 }
 
 .product-content {
@@ -680,6 +680,10 @@ h2::after {
 
 .product-button:hover {
     background-color: #323232;
+}
+
+.products-course {
+    width: 300px;
 }
 
 .products-course:nth-child(2) {
@@ -1094,6 +1098,22 @@ h2::after {
 
     footer {
         width: 100%;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 1199px) {
+    .trends {
+        display: flex;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    .trend {
+        width: clac(99% / 4);
+        height: 320px;
+    }
+    .trend:nth-child(n + 2) {
+        margin-right: 3px;
     }
 }
 
